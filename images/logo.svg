@@ -1,26 +1,81 @@
-<svg viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Define styles -->
-  <style>
-    .easy-text {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 90px;
-      font-weight: 700;
-      fill: #ffffff;
-      letter-spacing: -6px;
-      text-shadow: 0 0 10px #00ff41;
-    }
-    .shop-text {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 40px;
-      font-weight: 300;
-      fill: #00ff41;
-      letter-spacing: 18px;
-    }
-  </style>
-  
-  <!-- "videogame" text -->
-  <text x="10" y="110" class="easy-text">videogame</text>
-  
-  <!-- "store" text -->
-  <text x="28" y="160" class="shop-text">store</text>
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Glow -->
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="600" height="300" rx="24" fill="#00001111"/>
+
+    <!-- Star field -->
+    <g fill="#ffffff" opacity="0.6">
+        <circle cx="80" cy="40" r="2"/>
+        <circle cx="520" cy="60" r="2"/>
+        <circle cx="460" cy="230" r="2"/>
+        <circle cx="140" cy="220" r="2"/>
+        <circle cx="300" cy="30" r="2"/>
+    </g>
+
+    <!-- Burst -->
+    <polygon
+            points="300,18 340,60 395,50 372,95 425,120 372,145 395,190 340,178 300,220 260,178 205,190 228,145 175,120 228,95 205,50 260,60"
+            fill="#FFB703"
+            stroke="#FF6F00"
+            stroke-width="8"
+    />
+
+    <!-- PIXEL -->
+    <text x="300" y="120"
+          text-anchor="middle"
+          font-size="78"
+          font-family="Impact, Arial Black, sans-serif"
+          fill="#3ABEFF"
+          stroke="#0B1A2F"
+          stroke-width="10"
+          filter="url(#glow)">
+        PIXEL
+    </text>
+
+    <!-- POP -->
+    <text x="300" y="185"
+          text-anchor="middle"
+          font-size="78"
+          font-family="Impact, Arial Black, sans-serif"
+          fill="#FF4D8D"
+          stroke="#3A0018"
+          stroke-width="10"
+          filter="url(#glow)">
+        POP
+    </text>
+
+    <!-- SHOP -->
+    <text x="300" y="235"
+          text-anchor="middle"
+          font-size="42"
+          font-family="Impact, Arial Black, sans-serif"
+          fill="#FFD166"
+          stroke="#6A4A00"
+          stroke-width="6">
+        SHOP
+    </text>
+
+    <!-- Controller -->
+    <g transform="translate(405 165)">
+        <rect width="140" height="48" rx="14" fill="#1E1E2F" stroke="#000" stroke-width="4"/>
+
+        <!-- D-pad -->
+        <rect x="18" y="20" width="20" height="6" fill="#FFD166"/>
+        <rect x="25" y="13" width="6" height="20" fill="#FFD166"/>
+
+        <!-- Buttons -->
+        <circle cx="95" cy="24" r="6" fill="#3ABEFF"/>
+        <circle cx="115" cy="18" r="6" fill="#FF4D8D"/>
+        <circle cx="115" cy="30" r="6" fill="#FFD166"/>
+    </g>
 </svg>
